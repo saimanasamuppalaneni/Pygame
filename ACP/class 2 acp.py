@@ -2,15 +2,15 @@ import pygame
 pygame.init()
 
 pygame.display.set_caption("My First Game Screen")
-
-screen  = pygame.display.set_mode((500,500))
-screen.fill("grey")
+screen  = pygame.display.set_mode((640,480))
+screen.fill("white")
 done = False
-bg_surf = pygame.transform.scale(pygame.image.load("ps.jpg").convert(),(500,500))
 
 while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
+
+    pygame.draw.rect(screen,"pink",pygame.rect.Rect((100,160),(40,50)))
     
     pygame.display.flip()
